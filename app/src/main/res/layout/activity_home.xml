@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.osdar.androiddevprogrammingtest.features.home.viewModel.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".features.home.view.HomeActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/home_toolbar"
+            style="@style/Widget.AppCompat.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/Theme.AppCompat.Light.NoActionBar"
+            app:title="@string/home" />
+
+        <ExpandableListView
+            android:id="@+id/home_expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="0.5dp"
+            android:indicatorRight="?android:attr/expandableListPreferredItemIndicatorRight"
+            android:visibility="@{viewModel.showNoItemsFoundMessage ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_toolbar"
+            tools:listitem="@layout/main_item"
+            tools:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_error_gray_24dp"
+            android:text="@string/there_is_no_data"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            android:visibility="@{viewModel.showNoItemsFoundMessage ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.showTheProgressBar ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

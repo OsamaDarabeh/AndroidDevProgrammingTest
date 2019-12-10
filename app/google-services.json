@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "362693683936",
+    "firebase_url": "https://android-dev-programming-test.firebaseio.com",
+    "project_id": "android-dev-programming-test",
+    "storage_bucket": "android-dev-programming-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362693683936:android:be788b1ace221aab04be85",
+        "android_client_info": {
+          "package_name": "com.osdar.androiddevprogrammingtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362693683936-c22do9110icqmqbsrd2a0mdflqikied0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.osdar.androiddevprogrammingtest",
+            "certificate_hash": "db43bcda3ca19861c7ae97f1a78eab3995f09b8c"
+          }
+        },
+        {
+          "client_id": "362693683936-so5jcuchnj96uma7hqsobhuhhigp2nrs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9VZwahuQ0dcgRqhpXbdl65BovsejdKNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362693683936-so5jcuchnj96uma7hqsobhuhhigp2nrs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
